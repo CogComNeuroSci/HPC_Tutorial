@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Ask for updates via email:
+
+#PBS -m bea
+
+# Specify how many nodes (nodes) and processors per node (ppn) your job will require:
+
+#PBS -l nodes=1:ppn=1
+
+# Specify the amount of memory your job will require: 
+
+#PBS -l mem=1gb
+
+# Specify how much time (HH:MM:SS) your job will require:
+
+#PBS -l walltime=00:05:00
+
+# Set the working directory (using your own VSC username):
+
+cd /user/gent/435/vsc43506/
+
+# Load the appropriate software packages:
+
+# module load [insert module here]
+
+# Indicate what script should be run:
+
+python ./first_job.py
