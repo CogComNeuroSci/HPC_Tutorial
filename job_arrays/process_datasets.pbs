@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -l nodes=1:ppn=27 # the HPC prefers this to be a multiple of 9
+#PBS -l nodes=1:ppn=28 # the HPC prefers this to be a multiple of 4
 
 #PBS -l mem=1gb
 
@@ -13,4 +13,4 @@ python process_datasets.py ${PBS_ARRAYID}
 ### This script is submitted to the cluster with the following two commands:
 
 # module load worker/1.6.11-intel-2019b
-# wsub -t 1-100 -batch process_datasets.pbs
+# qsub -t 1-100 process_datasets.pbs
